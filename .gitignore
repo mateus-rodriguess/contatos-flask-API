@@ -1,0 +1,8 @@
+*.pyc
+.env
+__pycache__
+*.db
+*.sqlite3
+Pipfile.lock
+.idea
+.vscode
