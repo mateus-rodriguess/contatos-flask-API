@@ -4,7 +4,6 @@ from app.models import User, Contact
 
 app = create_app("devolopment")
 
-# flask db
 Migrate(app, db)
 
 
@@ -14,11 +13,12 @@ def shell_context():
         app=app,
         db=db,
         User=User,
-        Contact=Contact
+        Contact=Contact,
     )
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
     
 

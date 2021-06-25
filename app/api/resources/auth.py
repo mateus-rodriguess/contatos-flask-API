@@ -1,7 +1,7 @@
 from flask_restful import Resource, marshal, request
 from app.models import User
 from app import db
-from app.schemas.schemas import user_fields
+from app.api.schemas.schemas import user_fields
 import jwt
 import datetime
 from flask import current_app

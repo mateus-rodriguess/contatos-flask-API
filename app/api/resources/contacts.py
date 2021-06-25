@@ -1,8 +1,8 @@
 from flask_restful import Resource, marshal
 from app.models import Contact
 from app import db
-from app.schemas.schemas import contact_filds
-from app.decorator import jwt_required
+from app.api.schemas.schemas import contact_filds
+from app.api.decorator import jwt_required
 from flask_restful import request
 
 
@@ -19,7 +19,7 @@ class Contacts(Resource):
         first_name = payload["first_name"]
         last_name = payload["last_name"]
         cellphone = payload["cellphone"]
-    
+
         try:
             contact = Contact(first_name, last_name, cellphone)
             db.session.add(contact)
